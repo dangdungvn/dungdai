@@ -4,11 +4,14 @@ p = int(input("Nhập p: "))
 q = int(input("Nhập q: "))
 e = int(input("Nhập e: "))
 n = p*q
+print("N = ",n)
 dn = (p-1) * (q-1)
+print("phi N = ",dn)
 if e>=dn or e<=1:
 	print("Hệ lỗi!")
 	sys.exit()
 d = pow(e, -1, dn)
+print("d = ",d)
 print("Khóa công khai Kp: (e,n) = ({},{})".format(e,n))
 print("Khóa bảo mật Ks: (d,n) = ({},{})".format(d,n))
 while True:
