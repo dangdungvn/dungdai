@@ -25,59 +25,60 @@ def find_duplicate_substring(large_string):
     else:
         return None
 
+
 chuoi = input("Nhập vào bản rõ: ")
 d = int(input("Bạn muốn giải thuật hay tìm khóa, ấn 1 hoặc 2: "))
 if d == 1:
-	chuoimh = ""
-	chuoigm = ""
-	khoa = input("Nhập vào key: ")
-	m = len(khoa)
-	for i in range(len(chuoi)):
-		ktmh = chuoi[i]
-		k = khoa[i % m]
-		if chuoi[i] == ' ':
-			ktmh = ' '
-		else:
-			if ktmh.isalpha():
-				if ktmh.isupper():
-					chu = ord('A')
-				else:
-					chu = ord('a')
-				ktmh = chr((ord(ktmh) - chu + ord(k) - chu) % 26 + chu)
-		chuoimh += ktmh
-	print("Bản mã khi đã được mã hóa: ",chuoimh)
-	for i in range(len(chuoimh)):
-		ktgm = chuoimh[i]
-		k = khoa[i % m]
-		if chuoimh[i] == ' ':
-			ktgm = ' '
-		else:
-			if ktgm.isalpha():
-				if ktgm.isupper():
-					chu = ord('A')
-				else:
-					chu = ord('a')
-				ktgm = chr((ord(ktgm) - chu - ord(k) + chu) % 26 + chu)
-		chuoigm += ktgm
-	print("Bản rõ sau khi được giải mã: ",chuoigm)
+    chuoimh = ""
+    chuoigm = ""
+    khoa = input("Nhập vào key: ")
+    m = len(khoa)
+    for i in range(len(chuoi)):
+        ktmh = chuoi[i]
+        k = khoa[i % m]
+        if chuoi[i] == ' ':
+            ktmh = ' '
+        else:
+            if ktmh.isalpha():
+                if ktmh.isupper():
+                    chu = ord('A')
+                else:
+                    chu = ord('a')
+                ktmh = chr((ord(ktmh) - chu + ord(k) - chu) % 26 + chu)
+        chuoimh += ktmh
+    print("Bản mã khi đã được mã hóa: ", chuoimh)
+    for i in range(len(chuoimh)):
+        ktgm = chuoimh[i]
+        k = khoa[i % m]
+        if chuoimh[i] == ' ':
+            ktgm = ' '
+        else:
+            if ktgm.isalpha():
+                if ktgm.isupper():
+                    chu = ord('A')
+                else:
+                    chu = ord('a')
+                ktgm = chr((ord(ktgm) - chu - ord(k) + chu) % 26 + chu)
+        chuoigm += ktgm
+    print("Bản rõ sau khi được giải mã: ", chuoigm)
 else:
-	khoa = ""
-	chuoimh = input("Nhập vào bản mã: ")
-	chuoisua = chuoi.replace(' ','')
-	for i in range(len(chuoimh)):
-		ktgm = chuoimh[i]
-		ktmh = chuoisua[i]
-		if ktgm.isalpha():
-			if ktgm.isupper():
-				chu = ord('A')
-			else:
-				chu = ord('a')
-		ktkey = chr((ord(ktgm)- ord(ktmh)+ chu) % 26 + chu)
-		khoa += ktkey
-	print("Key của chuỗi là: ",khoa)
-	input_large_string = khoa
-	result = find_duplicate_substring(input_large_string)
-	if result:
-	    print("Chuỗi ký tự bị lặp: ", result)
-	else:
-	    print("Không có chuỗi ký tự nào bị lặp trong chuỗi lớn.")
+    khoa = ""
+    chuoimh = input("Nhập vào bản mã: ")
+    chuoisua = chuoi.replace(' ', '')
+    for i in range(len(chuoimh)):
+        ktgm = chuoimh[i]
+        ktmh = chuoisua[i]
+        if ktgm.isalpha():
+            if ktgm.isupper():
+                chu = ord('A')
+            else:
+                chu = ord('a')
+        ktkey = chr((ord(ktgm) - ord(ktmh) + chu) % 26 + chu)
+        khoa += ktkey
+    print("Key của chuỗi là: ", khoa)
+    input_large_string = khoa
+    result = find_duplicate_substring(input_large_string)
+    if result:
+        print("Chuỗi ký tự bị lặp: ", result)
+    else:
+        print("Không có chuỗi ký tự nào bị lặp trong chuỗi lớn.")
