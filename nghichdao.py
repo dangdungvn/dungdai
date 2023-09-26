@@ -1,4 +1,5 @@
 a = int(input())
+x = int(input())
 n = int(input())
-b = pow(a, -1, n)
+b = pow(a, x, n)
 print(b)
