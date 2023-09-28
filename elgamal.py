@@ -1,4 +1,3 @@
-import math
 import sys
 p = int(input("Nhập P = "))
 a = int(input("Nhập a = "))

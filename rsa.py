@@ -1,4 +1,3 @@
-import math
 import sys
 p = int(input("Nhập p: "))
 q = int(input("Nhập q: "))
@@ -26,15 +25,16 @@ Số tương ứng: """))
         c = pow(m, e, n)
         print("Bản mã thu được: C = ", c)
     elif temp == 2:
-        c = int(input("Nhập vào bản rõ : C = "))
+        c = int(input("Nhập vào bản mã : C = "))
         m = pow(c, d, n)
-        print("Bản mã thu được: M = ", m)
+        print("Bản rõ thu được: M = ", m)
     elif temp == 3:
         m = int(input("Nhập vào bản mã của chữ ký: M = "))
         s = pow(m, d, n)
         print("Chữ ký là: ", s)
         print("Kiểm tra chữ ký số!")
         md = pow(s, e, n)
+        print("Hệ có M' = ", md)
         if m == md:
             print("Chữ ký hợp lệ!")
     else:
