@@ -37,15 +37,11 @@ for i in range(3):
 	k.append(r)
 inmatran(k)
 kn = np.array(k)
-ktest = np.linalg.inv(kn)
-inmatran(ktest)
 dk = np.linalg.det(kn)
 dk = int(dk)
 print("det(K)= ", dk)
 print("GCD của det(k) và Z là: ", math.gcd(dk, 26))
-if math.gcd(dk, 26) != 1:
-	print("Lỗi chương trình! K không thể là khóa")
-	sys.exit()
+
 for i in range(0, len(s), 3):
 	if s[i].isalpha():
 		so1 = ((ord(s[i]) - 65) * k[0][0] + (ord(s[i+1]) - 65) * k[1][0] + (ord(s[i+2]) - 65) * k[2][0])
@@ -71,7 +67,7 @@ for i in range(0, len(s), 3):
 	c += t
 print("Chuỗi sau khi mã hóa: ", c)
 if idx == 1:
-	c = c[:len(c)-3]
-if idx == 2:
 	c = c[:len(c)-2]
+if idx == 2:
+	c = c[:len(c)-1]
 print("Chuỗi sau khi cắt các phần tử thừa: ", c)
