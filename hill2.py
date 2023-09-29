@@ -17,6 +17,7 @@ c = ""
 d = ""
 ds = ""
 dd = ""
+t =""
 s = s.upper()
 
 if len(s) % 3 == 1:

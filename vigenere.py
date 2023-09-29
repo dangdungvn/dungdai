@@ -1,6 +1,7 @@
 # Nhập vào bản rõ
 import sys
 # lựa chọn
+chu = 0
 while True:
 	d = int(input("""
 Nhập 1: mã hóa thông điệp

@@ -1,5 +1,7 @@
 chuoimh = ""
 chuoigm = ""
+somh = 0
+sogm = 0
 chuoi = input("Nhập vào chuỗi ban đầu: ")
 k = int(input("Nhập k= "))
 print("Các ký tự sau khi được mã hóa sẽ trở thành các số: ")

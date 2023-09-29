@@ -12,6 +12,7 @@ import webbrowser
 
 laika_mouth = pyttsx3.init()
 laika_brain =""
+loichao =""
 
 x = datetime.datetime.now()
 thoigian = int(x.strftime("%H"))
@@ -148,30 +149,6 @@ while i<3:
 			output.save("output.mp3")
 			playsound.playsound('output.mp3')
 			break
-		
-		elif "Wikipedia" in you:
-			r = sr.Recognizer()
-			with sr.Microphone() as source:
-				print("Wikipedia: ...")
-				audio = r.listen(source,timeout=5, phrase_time_limit=5)
-			try:
-				wiki = r.recognize_google(audio,language="vi-VI")
-			except:
-				wiki='Sorry'
-			wikipedia.set_lang("vi")
-			wiki=wikipedia.summary(wiki)
-			print(wiki)
-			laika_brain=wiki
-			
-			output = gTTS(laika_brain,lang="vi", slow=False)
-			output.save("output.mp3")
-			playsound.playsound('output.mp3')
-			os.remove('output.mp3')
-			laika_brain='Đến đây là hết thông tin'
-			time.sleep(3)
-			continue
-		
-
 		elif "Flappy Bird" in you:
 			os.system('python fly.py')
 			laika_brain='Đang mở game'	

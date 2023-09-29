@@ -2,6 +2,8 @@ import math
 import sys
 chuoimh = ""
 chuoigm = ""
+somh = 0
+sogm = 0
 chuoi = input("Nhập chuỗi ban đầu: ")
 a = int(input("Nhập a: "))
 b = int(input("Nhập b: "))
