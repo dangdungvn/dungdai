@@ -37,6 +37,8 @@ Số tương ứng: """))
         print("Hệ có M' = ", md)
         if m == md:
             print("Chữ ký hợp lệ!")
+        else:
+            print("Chữ ký không hợp lệ")
     else:
         print("Chương trình kết thúc!")
         sys.exit()
