@@ -51,7 +51,7 @@ s = s.replace(" ", "")
 s = s.upper()
 
 
-print("Nhập các phần tử của ma trận k: ")
+print("Nhập các phần tử của ma trận thứ k: ")
 for i in range(2):
 	r = []
 	for j in range(2):
