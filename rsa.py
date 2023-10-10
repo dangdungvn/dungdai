@@ -11,7 +11,7 @@ if e >= dn or e <= 1:
     sys.exit()
 d = pow(e, -1, dn)
 print("d = ", d)
-print("Khóa công khai Kp: (e,n) = ({},{})".format(e, n))
+print("Khoá công khai Kp: (e,n) = ({},{})".format(e, n))
 print("Khóa bảo mật Ks: (d,n) = ({},{})".format(d, n))
 while True:
     temp = int(input("""

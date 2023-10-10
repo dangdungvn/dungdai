@@ -63,6 +63,7 @@ if d == 1:
     print("Bản rõ sau khi được giải mã: ", chuoigm)
 else:
     khoa = ""
+    chu = 0
     chuoimh = input("Nhập vào bản mã: ")
     chuoisua = chuoi.replace(' ', '')
     for i in range(len(chuoimh)):
