@@ -25,7 +25,7 @@ Số tương ứng: """))
         c2 = int(input("Nhập bản mã C2 = "))
         khoa = pow(c1, (p-1-x), p)
         print("Khóa của hệ: K = ", khoa)
-        m = (khoa*c2) % p
+        m = (khoa*c2) % p 
         print("Bản rõ M = {}".format(m))
     else:
         print("Kết thúc chương trình!")
