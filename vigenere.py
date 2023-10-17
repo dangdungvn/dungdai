@@ -68,6 +68,7 @@ Số tương ứng: """))
                     chu = ord('a')
             ktkey = chr((ord(ktgm) - ord(ktmh)) % 26 + chu)
             khoa += ktkey
+        print("Key lúc chưa bị cắt sẽ là:", khoa)
         khoa = khoa[:m]
         print("Key của chuỗi là: ", khoa)
     else:
