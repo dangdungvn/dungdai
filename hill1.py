@@ -95,7 +95,7 @@ nk[0][0], nk[1][1] = k[1][1], k[0][0]
 nk[0][1], nk[1][0] = -k[0][1], -k[1][0]
 
 
-kp = pow(detk, -1, 26)
+kp = pow(detk, -1, 26)  # type: ignore
 print("nghịch đảo của det(K): ", kp)
 knd = kmod(nk, 26)
 print("Ma trận k phụ hợp sau khi mod 26: ")
