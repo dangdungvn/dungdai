@@ -31,4 +31,4 @@ for i in chuoimh:
         ktgm = i
     chuoigm += ktgm
     print(" ", sogm)
-print("Chuỗi sau khi được giải mã: ", chuoigm)
+print("Chuỗi sau khi được giải mã là: ", chuoigm)
